@@ -73,7 +73,7 @@ const Structure = () => {
             {struktur.gambar_bagan ? (
               <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
                 <img
-                  src={`https://api-inventory.isavralabel.com${struktur.gambar_bagan}`}
+                  src={`https://api-inventory.isavralabel.com/appgi${struktur.gambar_bagan}`}
                   alt="Bagan Struktur Organisasi APPGI"
                   className="w-full h-auto rounded-lg shadow-md"
                 />

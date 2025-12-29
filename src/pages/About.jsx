@@ -54,7 +54,7 @@ const About = () => {
               <div className="relative">
                 {profile.logo_url ? (
                   <img
-                    src={`https://api-inventory.isavralabel.com${profile.logo_url}`}
+                    src={`https://api-inventory.isavralabel.com/appgi${profile.logo_url}`}
                     alt="APPGI Logo"
                     className="w-full max-w-md mx-auto"
                   />
