@@ -67,7 +67,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             {/* {profile.logo_url && (
               <img
-                src={`http://localhost:5000${profile.logo_url}`}
+                src={`https://api-inventory.isavralabel.com${profile.logo_url}`}
                 alt="APPGI Logo"
                 className="h-10 w-auto lg:h-12 transition-transform duration-300 group-hover:scale-105"
               />

@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               {/* {profile.logo_url && (
                 <img
-                  src={`http://localhost:5000${profile.logo_url}`}
+                  src={`https://api-inventory.isavralabel.com${profile.logo_url}`}
                   alt="APPGI Logo"
                   className="h-12 w-auto"
                 />

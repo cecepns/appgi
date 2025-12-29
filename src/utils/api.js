@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// const BASE_URL = 'http://localhost:5000/api';
+// const BASE_URL = 'https://api-inventory.isavralabel.com/api';
 const BASE_URL = 'https://api-inventory.isavralabel.com/appgi/api';
 
 // Create axios instance

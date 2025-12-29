@@ -211,7 +211,7 @@ const AdminWebsiteInfo = () => {
                     <div>
                       <p className="text-sm font-medium text-gray-700 mb-2">Favicon Saat Ini:</p>
                       <img
-                        src={`http://localhost:5000${formData.favicon_url}`}
+                        src={`https://api-inventory.isavralabel.com${formData.favicon_url}`}
                         alt="Favicon"
                         className="w-8 h-8 border border-gray-200 rounded"
                       />
@@ -250,7 +250,7 @@ const AdminWebsiteInfo = () => {
                     <div>
                       <p className="text-sm font-medium text-gray-700 mb-2">Banner Saat Ini:</p>
                       <img
-                        src={`http://localhost:5000${formData.hero_banner_url}`}
+                        src={`https://api-inventory.isavralabel.com${formData.hero_banner_url}`}
                         alt="Hero Banner"
                         className="w-full max-h-32 object-cover border border-gray-200 rounded-lg"
                       />

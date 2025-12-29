@@ -163,7 +163,7 @@ const AdminStructure = () => {
                   <div className="mb-4">
                     <p className="text-sm font-medium text-gray-700 mb-3">Bagan Saat Ini:</p>
                     <img
-                      src={`http://localhost:5000${formData.gambar_bagan}`}
+                      src={`https://api-inventory.isavralabel.com${formData.gambar_bagan}`}
                       alt="Bagan Struktur Organisasi"
                       className="w-full max-h-64 object-contain border border-gray-200 rounded-lg"
                     />

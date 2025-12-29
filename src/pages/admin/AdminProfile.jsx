@@ -136,7 +136,7 @@ const AdminProfile = () => {
                   <div className="flex-shrink-0">
                     {formData.logo_url ? (
                       <img
-                        src={`http://localhost:5000${formData.logo_url}`}
+                        src={`https://api-inventory.isavralabel.com${formData.logo_url}`}
                         alt="Logo APPGI"
                         className="w-24 h-24 object-cover rounded-lg border border-gray-200"
                       />

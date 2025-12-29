@@ -67,7 +67,7 @@ const Home = () => {
               <div className="relative">
                 {profile.logo_url ? (
                   <img
-                    src={`http://localhost:5000${profile.logo_url}`}
+                    src={`https://api-inventory.isavralabel.com${profile.logo_url}`}
                     alt="APPGI Logo"
                     className="w-full max-w-lg mx-auto animate-float"
                   />
