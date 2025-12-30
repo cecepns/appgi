@@ -92,7 +92,7 @@ const Home = () => {
           <div className="section-header" data-aos="fade-up">
             <h2 className="text-gradient">Tentang APPGI</h2>
             <p className="text-gray-600 text-lg mt-4 max-w-3xl mx-auto">
-              Mengenal lebih dekat organisasi yang berkomitmen membangun profesionalitas industri pemboran Indonesia
+            Mengenal lebih dekat organisasi yang berkomitmen membangun profesionalitas industri minyak dan gas bumi Indonesia
             </p>
           </div>
           
@@ -246,7 +246,7 @@ const Home = () => {
               Bergabunglah dengan APPGI
             </h2>
             <p className="text-xl mb-10 text-primary-100 max-w-3xl mx-auto leading-relaxed">
-              Mari bersama-sama membangun industri pemboran Indonesia yang lebih profesional dan berkelanjutan
+            Mari bersama-sama membangun industri minyak dan gas bumi Indonesia yang lebih profesional dan berkelanjutan
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

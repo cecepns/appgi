@@ -40,7 +40,7 @@ const VisionMission = () => {
               Visi & Misi
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              Komitmen dan arah strategis APPGI dalam membangun masa depan industri pemboran Indonesia
+            Komitmen dan arah strategis APPGI dalam membangun masa depan industri minyak dan gas bumi Indonesia
             </p>
           </div>
         </div>
