@@ -201,7 +201,7 @@ const About = () => {
                 APPGI berkomitmen untuk meningkatkan profesionalitas anggotanya
                 melalui berbagai program pengembangan kapasitas, standardisasi
                 teknis, dan pertukaran knowledge terkini dalam industri
-                pemboran. Organisasi ini juga berperan aktif dalam membangun
+                minyak dan gas bumi. Organisasi ini juga berperan aktif dalam membangun
                 jaringan kerjasama yang kuat antar anggota dan stakeholder
                 industri.
               </p>
