@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { publicAPI } from '../utils/api';
-import bg2 from '../assets/bg-2.jpg';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { publicAPI } from "../utils/api";
+import bg2 from "../assets/bg-2.jpg";
 
 const Home = () => {
   const [profile, setProfile] = useState({});
@@ -9,17 +9,16 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all([
-      publicAPI.getProfile(),
-      publicAPI.getVisiMisi()
-    ]).then(([profileResponse, visiMisiResponse]) => {
-      setProfile(profileResponse.data);
-      setVisiMisi(visiMisiResponse.data);
-      setLoading(false);
-    }).catch(error => {
-      console.error('Error loading data:', error);
-      setLoading(false);
-    });
+    Promise.all([publicAPI.getProfile(), publicAPI.getVisiMisi()])
+      .then(([profileResponse, visiMisiResponse]) => {
+        setProfile(profileResponse.data);
+        setVisiMisi(visiMisiResponse.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error loading data:", error);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
@@ -39,13 +38,15 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" className="order-2 lg:order-1">
               <h1 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-                {profile.nama_organisasi || 'APPGI'}
+                {profile.nama_organisasi || "APPGI"}
               </h1>
               <p className="text-xl lg:text-2xl mb-8 text-primary-100 leading-relaxed">
-                {profile.tagline || 'Membangun Profesionalitas dalam Industri Pemboran Indonesia'}
+                {profile.tagline ||
+                  "Membangun Profesionalitas dalam Industri Pemboran Indonesia"}
               </p>
               <p className="text-lg mb-10 text-primary-50 leading-relaxed">
-                {profile.deskripsi_singkat || 'APPGI adalah organisasi profesional yang bergerak dalam bidang pemboran minyak, gas, dan panas bumi di Indonesia.'}
+                {profile.deskripsi_singkat ||
+                  "APPGI adalah organisasi profesional yang bergerak dalam bidang pemboran minyak, gas, dan panas bumi di Indonesia."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -62,7 +63,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            
+
             <div data-aos="fade-left" className="order-1 lg:order-2">
               <div className="relative">
                 {profile.logo_url ? (
@@ -80,7 +81,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-secondary-500/20 rounded-full blur-3xl"></div>
@@ -92,60 +93,86 @@ const Home = () => {
           <div className="section-header" data-aos="fade-up">
             <h2 className="text-gradient">Tentang APPGI</h2>
             <p className="text-gray-600 text-lg mt-4 max-w-3xl mx-auto">
-            Mengenal lebih dekat organisasi yang berkomitmen membangun profesionalitas industri minyak dan gas bumi Indonesia
+              Mengenal lebih dekat organisasi yang berkomitmen membangun
+              profesionalitas industri minyak dan gas bumi Indonesia
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
               <div className="prose prose-lg">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  {profile.deskripsi_lengkap || 
-                   'Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang pemboran minyak, gas, dan panas bumi.'}
+                  {profile.deskripsi_lengkap ||
+                    "Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang pemboran minyak, gas, dan panas bumi."}
                 </p>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                   <div className="bg-primary-50 p-6 rounded-xl">
-                    <h4 className="font-semibold text-primary-800 mb-2">Tahun Berdiri</h4>
+                    <h4 className="font-semibold text-primary-800 mb-2">
+                      Tahun Berdiri
+                    </h4>
                     <p className="text-2xl font-bold text-primary-600">
-                      {profile.tahun_berdiri ? new Date(profile.tahun_berdiri).getFullYear() : '2014'}
+                      {profile.tahun_berdiri
+                        ? new Date(profile.tahun_berdiri).getFullYear()
+                        : "2014"}
                     </p>
                   </div>
                   <div className="bg-secondary-50 p-6 rounded-xl">
-                    <h4 className="font-semibold text-secondary-800 mb-2">Bidang Usaha</h4>
+                    <h4 className="font-semibold text-secondary-800 mb-2">
+                      Bidang Usaha
+                    </h4>
                     <p className="text-sm text-secondary-700">
-                      {profile.bidang_usaha || 'Pemboran Minyak, Gas, dan Panas Bumi'}
+                      {profile.bidang_usaha ||
+                        "Pemboran Minyak, Gas, dan Panas Bumi"}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div data-aos="fade-left">
               <div className="bg-gradient-to-br from-primary-100 to-secondary-100 p-8 lg:p-12 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6 text-gray-800">Legalitas Organisasi</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-800">
+                  Legalitas Organisasi
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                    <span className="text-gray-700">Organisasi Profesional Terdaftar</span>
+                    <span className="text-gray-700">
+                      Organisasi Profesional Terdaftar
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-secondary-600 rounded-full"></div>
-                    <span className="text-gray-700">Berafiliasi dengan Industri Nasional</span>
+                    <span className="text-gray-700">
+                      Berafiliasi dengan Industri Nasional
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-accent-600 rounded-full"></div>
-                    <span className="text-gray-700">Berkomitmen pada Standar Internasional</span>
+                    <span className="text-gray-700">
+                      Berkomitmen pada Standar Internasional
+                    </span>
                   </div>
                 </div>
-                
+
                 <Link
                   to="/tentang"
                   className="inline-flex items-center mt-8 text-primary-600 hover:text-primary-700 font-medium"
                 >
                   Pelajari Lebih Lanjut
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-5 h-5 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </Link>
               </div>
@@ -158,38 +185,67 @@ const Home = () => {
       <section className="section bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">Visi & Misi</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">
+              Visi & Misi
+            </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Komitmen kami dalam membangun masa depan industri pemboran Indonesia
+              Komitmen kami dalam membangun masa depan industri pemboran
+              Indonesia
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Visi */}
             <div data-aos="fade-right">
               <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-xl h-full">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    <svg
+                      className="w-6 h-6 text-primary-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Visi</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  {visiMisi.visi || 'Menjadi wadah organisasi untuk menciptakan para profesional yang berkualitas dan terpercaya'}
+                  {visiMisi.visi ||
+                    "Menjadi wadah organisasi untuk menciptakan para profesional yang berkualitas dan terpercaya"}
                 </p>
               </div>
             </div>
-            
+
             {/* Misi Preview */}
             <div data-aos="fade-left">
               <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-xl h-full">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-6 h-6 text-secondary-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800">Misi</h3>
@@ -213,8 +269,18 @@ const Home = () => {
                       className="inline-flex items-center text-secondary-600 hover:text-secondary-700 font-medium mt-4"
                     >
                       Lihat Semua Misi
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
                       </svg>
                     </Link>
                   )}
@@ -222,12 +288,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-12" data-aos="fade-up">
-            <Link
-              to="/visi-misi"
-              className="btn btn-primary"
-            >
+            <Link to="/visi-misi" className="btn btn-primary">
               Selengkapnya Visi & Misi
             </Link>
           </div>
@@ -235,7 +298,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section 
+      <section
         className="section relative text-white bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bg2})` }}
       >
@@ -246,7 +309,8 @@ const Home = () => {
               Bergabunglah dengan APPGI
             </h2>
             <p className="text-xl mb-10 text-primary-100 max-w-3xl mx-auto leading-relaxed">
-            Mari bersama-sama membangun industri minyak dan gas bumi Indonesia yang lebih profesional dan berkelanjutan
+              Mari bersama-sama membangun industri minyak dan gas bumi Indonesia
+              yang lebih profesional dan berkelanjutan
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

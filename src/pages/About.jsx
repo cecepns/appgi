@@ -41,8 +41,8 @@ const About = () => {
               Tentang APPGI
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              Mengenal lebih dekat Asosiasi Perusahaan Pemboran Minyak, Gas, dan
-              Panas Bumi Indonesia
+              Komitmen dan arah strategis APPGI dalam membangun masa depan
+              industri minyak dan gas bumi Indonesia
             </p>
           </div>
         </div>
