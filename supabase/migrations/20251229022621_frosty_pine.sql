@@ -91,19 +91,19 @@ INSERT INTO admin (username, password, email) VALUES
 INSERT INTO profile_organisasi (nama_organisasi, tagline, deskripsi_singkat, deskripsi_lengkap, bidang_usaha) VALUES 
 ('APPGI (Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia)', 
 'Membangun Profesionalitas dalam Industri Pemboran Indonesia',
-'APPGI adalah organisasi profesional yang bergerak dalam bidang pemboran minyak, gas, dan panas bumi di Indonesia.',
-'Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang pemboran minyak, gas, dan panas bumi untuk meningkatkan kualitas dan profesionalitas industri pemboran di Indonesia.',
+'APPGI adalah organisasi profesional yang bergerak dalam bidang minyak dan gas bumi minyak, gas, dan panas bumi di Indonesia.',
+'Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang minyak dan gas bumi minyak, gas, dan panas bumi untuk meningkatkan kualitas dan profesionalitas industri minyak dan gas bumi di Indonesia.',
 'Pemboran Minyak, Gas, dan Panas Bumi');
 
 INSERT INTO visi_misi (visi) VALUES 
 ('Menjadi wadah organisasi untuk menciptakan para profesional yang berkualitas dan terpercaya');
 
 INSERT INTO misi (visi_misi_id, urutan, teks_misi) VALUES 
-(1, 1, 'Meningkatkan profesionalitas anggota dalam bidang pemboran minyak, gas, dan panas bumi'),
+(1, 1, 'Meningkatkan profesionalitas anggota dalam bidang minyak dan gas bumi minyak, gas, dan panas bumi'),
 (1, 2, 'Membangun jaringan kerjasama yang kuat antar anggota dan stakeholder industri'),
-(1, 3, 'Mengembangkan standar teknis dan keselamatan kerja dalam industri pemboran'),
+(1, 3, 'Mengembangkan standar teknis dan keselamatan kerja dalam industri minyak dan gas bumi'),
 (1, 4, 'Menyediakan platform pertukaran knowledge dan teknologi terkini'),
-(1, 5, 'Mendukung pengembangan sumber daya manusia Indonesia di bidang pemboran');
+(1, 5, 'Mendukung pengembangan sumber daya manusia Indonesia di bidang minyak dan gas bumi');
 
 INSERT INTO struktur_organisasi (periode, deskripsi, is_active) VALUES 
 ('2024 - 2029', 'Struktur organisasi APPGI periode 2024-2029 yang terdiri dari berbagai divisi dan departemen untuk menjalankan visi dan misi organisasi.', TRUE);
@@ -118,5 +118,5 @@ INSERT INTO kontak (alamat, email, telepon, whatsapp, google_maps_embed, jam_ope
 
 INSERT INTO website_info (site_title, site_description, footer_copyright) VALUES 
 ('APPGI - Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia',
-'Website resmi APPGI - Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia. Membangun profesionalitas dalam industri pemboran Indonesia.',
+'Website resmi APPGI - Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia. Membangun profesionalitas dalam industri minyak dan gas bumi Indonesia.',
 'Copyright © 2024 APPGI. All rights reserved.');

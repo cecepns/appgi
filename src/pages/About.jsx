@@ -76,7 +76,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 {profile.deskripsi_lengkap ||
-                  "Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang pemboran minyak, gas, dan panas bumi untuk meningkatkan kualitas dan profesionalitas industri pemboran di Indonesia."}
+                  "Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang minyak dan gas bumi minyak, gas, dan panas bumi untuk meningkatkan kualitas dan profesionalitas industri minyak dan gas bumi di Indonesia."}
               </p>
 
               {profile.tagline && (

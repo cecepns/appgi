@@ -46,7 +46,7 @@ const Home = () => {
               </p>
               <p className="text-lg mb-10 text-primary-50 leading-relaxed">
                 {profile.deskripsi_singkat ||
-                  "APPGI adalah organisasi profesional yang bergerak dalam bidang pemboran minyak, gas, dan panas bumi di Indonesia."}
+                  "APPGI adalah organisasi profesional yang bergerak dalam bidang minyak dan gas bumi minyak, gas, dan panas bumi di Indonesia."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -103,7 +103,7 @@ const Home = () => {
               <div className="prose prose-lg">
                 <p className="text-gray-700 leading-relaxed mb-6">
                   {profile.deskripsi_lengkap ||
-                    "Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang pemboran minyak, gas, dan panas bumi."}
+                    "Asosiasi Perusahaan Pemboran Minyak, Gas, dan Panas Bumi Indonesia (APPGI) didirikan pada tanggal 10 Oktober 2014. APPGI merupakan wadah bagi para profesional dan perusahaan yang bergerak di bidang minyak dan gas bumi minyak, gas, dan panas bumi."}
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
@@ -189,7 +189,7 @@ const Home = () => {
               Visi & Misi
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Komitmen kami dalam membangun masa depan industri pemboran
+              Komitmen kami dalam membangun masa depan industri minyak dan gas bumi
               Indonesia
             </p>
           </div>

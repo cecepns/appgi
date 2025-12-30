@@ -141,7 +141,7 @@ const VisionMission = () => {
             </h2>
             <p className="text-xl mb-12 text-primary-100 max-w-3xl mx-auto leading-relaxed">
               Melalui visi dan misi yang jelas, APPGI berkomitmen untuk terus berkontribusi positif 
-              bagi pengembangan industri pemboran Indonesia
+              bagi pengembangan industri minyak dan gas bumi Indonesia
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -153,7 +153,7 @@ const VisionMission = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Inovasi Berkelanjutan</h3>
                 <p className="text-primary-100">
-                  Mendorong pengembangan teknologi dan metodologi terbaru dalam industri pemboran
+                  Mendorong pengembangan teknologi dan metodologi terbaru dalam industri minyak dan gas bumi
                 </p>
               </div>
               

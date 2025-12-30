@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               {profile.deskripsi_singkat ||
-                "APPGI adalah organisasi profesional yang bergerak dalam bidang pemboran minyak, gas, dan panas bumi di Indonesia."}
+                "APPGI adalah organisasi profesional yang bergerak dalam bidang minyak dan gas bumi minyak, gas, dan panas bumi di Indonesia."}
             </p>
             <div className="text-sm text-gray-400">
               Didirikan:{" "}
